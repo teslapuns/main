@@ -65,22 +65,3 @@ document.getElementById("select1").addEventListener("change", generateResult);
 document.getElementById("input2").addEventListener("input", generateResult);
 document.getElementById("checkbox1").addEventListener("change", generateResult);
 
-function toggleButton() {
-  var button = document.querySelector('.toggle-button');
-  // Проверяем текущее состояние кнопки
-  if (button.textContent === 'Нет') {
-    // Если текущий текст "Нет", меняем его на "Да"
-    button.textContent = 'Да';
-    // Добавляем класс "on" для изменения стилей на зеленый цвет
-    button.classList.add('on');
-    // Вызываем функцию, когда кнопка включена
-    buttonEnabled = true;
-  } else {
-    // Если текущий текст "Да", меняем его на "Нет"
-    button.textContent = 'Нет';
-    // Удаляем класс "on" для изменения стилей на красный цвет
-    button.classList.remove('on');
-    // Вызываем функцию, когда кнопка выключена
-    buttonEnabled = false;
-  }
-}
