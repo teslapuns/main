@@ -1,0 +1,76 @@
+/* Определение вашего шрифта */
+@font-face {
+	font-family: 'MyCustomFont';
+	src: url('JetBrainsMono-Medium.ttf') format('truetype');
+	/* дополнительные настройки, такие как font-weight и font-style, могут быть указаны здесь */
+}
+
+/* Применение вашего шрифта ко всем надписям, инпутам и селектам */
+body, .form-container input, select#select1, main {
+	font-family: 'MyCustomFont', Arial, sans-serif; /* Имя вашего шрифта, затем запасные варианты, такие как стандартные шрифты Arial и sans-serif */
+}
+
+#main {
+	font-size: 32px;
+	text-align: center;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	display: block;
+}
+
+/* Стили для формы */
+.form-container {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 40px;
+	background-color: #f8f9fa;
+	border: 1px solid #ced4da;
+	border-radius: 5px;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+	margin-bottom: 20px;
+}
+
+.form-container label {
+	display: block;
+	padding: 10px;
+	margin-bottom: 5px;
+}
+.form-container input {
+	display: block;
+	margin-bottom: 30px;
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	border: none;
+	border-radius: 3px;
+}
+
+/* Стили для результатов */
+#result-container {
+	margin-top: 20px;
+	padding: 20px;
+	background-color: #d4edda;
+	border: 1px solid #c3e6cb;
+	border-radius: 5px;
+	color: #155724;
+	max-width: 640px;
+	margin: 0 auto; /* Добавляем auto для автоматического выравнивания по центру */
+}
+
+
+.form-container select {
+	display: inline-block; /* Изменение на inline-block */
+	margin-left: 10px; /* Добавление отступа слева для select */
+	margin-bottom: 30px;
+	width: calc(100% - 160px); /* Вычисление ширины select с учетом ширины label и отступа */
+	padding: 10px;
+	font-size: 16px;
+	border: none;
+	border-radius: 3px;
+}
+
+#checkbox1 {
+    float: left;
+    margin-right: 10px; /* Добавляем отступ справа, чтобы текст был выровнен с левой стороны чекбокса */
+	width: 5%;
+  }

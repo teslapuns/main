@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Форма наказания</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <label id="main">Генератор наказаний</label>
+  <div class="form-container">
+
+    <label for="select1">Наказание:</label>
+    <select id="select1">
+      <option value="Мусорный аккаунт">Мусорный аккаунт</option>
+      <option value="Некорректный ник">Некорректный ник</option>
+      <option value="Мошенничество">Мошенничество</option>
+      <option value="Сквернословие">Сквернословие</option>
+      <option value="Конфликтное поведение">Конфликтное поведение</option>
+      <option value="Попрошайничество">Попрошайничество</option>
+      <option value="Флуд">Флуд</option>
+      <option value="Флуд командами">Флуд командами</option>
+      <option value="Ввод в заблуждение">Ввод в заблуждение</option>
+      <option value="Некорректный скин">Некорректный скин</option>
+      <option value="Тиммерство">Тиммерство</option>
+      <option value="Помеха">Помеха</option>
+      <option value="Читерство">Читерство</option>
+      <option value="Багоюз">Багоюз</option>
+      <option value="Гриферство">Гриферство</option>
+      <option value="Раздача">Раздача</option>
+      <option value="Запрещённые предметы на КВ">Запрещённые предметы на КВ</option>
+      <option value="Нарушение правил игры 'Крокодил'">Нарушение правил игры 'Крокодил'</option>
+    </select>
+
+    <label for="input1">Пользователь:</label>
+    <input type="text" id="input1" placeholder="Введите имя пользователя">
+
+    <label for="input2">Инцидент:</label>
+    <input type="number" id="input2" placeholder="Введите номер инцидента">
+
+    <label for="checkbox1">Добавлять фразу "[Жалоба на форуме]":</label>
+    <input type="checkbox" id="checkbox1">
+
+    <script src="script.js"></script>
+  </div>
+
+  <div id="result-container"></div>
+
+</body>
+</html>
