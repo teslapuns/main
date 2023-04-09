@@ -35,21 +35,21 @@ function generateResult() {
       result = puns[selectedIndex] + " " + input1;
     }
     if (inc == incidents[selectedIndex].length - 1) {
-      result += pun_time + " " + selectedValue + " [Инцидент " + inc + " (предпоследний)]";
+      result += pun_time + " " + selectedValue + "[Инцидент " + inc + "(предпоследний)]";
     } else if (inc == incidents[selectedIndex].length ) {
-      result += pun_time + " " + selectedValue + " [Инцидент " + inc + " (последний)]";
+      result += pun_time + " " + selectedValue + "[Инцидент " + inc + "(последний)]";
     } else {
-      result += pun_time + " " + selectedValue + " [Инцидент " + inc + "]";
+      result += pun_time + " " + selectedValue + "[Инцидент " + inc + "]";
     }
   }
   if (checkbox1) {
     result += " [Жалоба на форуме]";
   }
   if (input1 === "") {
-    result = "Ошибка: введите имя пользователя!";
+    result = "Ошибка: введите имя пользователя";
   } else if (input2 === "" && (puns[selectedIndex] != "/ban" && puns[selectedIndex] != "/warn" && puns[selectedIndex] != "/bans")) {
-    result = "Ошибка: введите номер инцидента!";
-  } else if (input2 > incidents[selectedIndex].length || (input2 < 1 && !(input2 === ""))){
+    result = "Ошибка: введите номер инцидента";
+  } else if (input2 > incidents[selectedIndex].length){
     result = "Ошибка: инцидент указан неверно!";
   }
   
@@ -62,4 +62,3 @@ document.getElementById("input1").addEventListener("input", generateResult);
 document.getElementById("select1").addEventListener("change", generateResult);
 document.getElementById("input2").addEventListener("input", generateResult);
 document.getElementById("checkbox1").addEventListener("change", generateResult);
-
