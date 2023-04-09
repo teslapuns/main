@@ -1,5 +1,3 @@
-var buttonEnabled = false;
-
 function generateResult() {
   // Получение введенных данных
   var input1 = document.getElementById("input1").value;
