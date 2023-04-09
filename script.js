@@ -3,6 +3,7 @@ var buttonEnabled = false;
 function generateResult() {
   // Получение введенных данных
   var input1 = document.getElementById("input1").value;
+  input1 = encodeURIComponent(input1); // Экранирование значения
   var select1 = document.getElementById("select1");
   var selectedValue = select1.options[select1.selectedIndex].value;
   var input2 = document.getElementById("input2").value;
