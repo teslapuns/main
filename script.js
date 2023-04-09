@@ -3,7 +3,7 @@ function generateResult() {
   var input1 = document.getElementById("input1").value;
   var select1 = document.getElementById("select1");
   var selectedValue = select1.options[select1.selectedIndex].value;
-  var input2 = document.getElementById("input2").value;
+  var input2 = decodeURIComponent(document.getElementById("input2").value);
   var checkbox1 = document.getElementById("checkbox1").checked;
 
   var incidents = [[], [], [], [], [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], [], [],
