@@ -51,7 +51,7 @@ function generateResult() {
     result = "Ошибка: введите имя пользователя!";
   } else if (input2 === "" && (puns[selectedIndex] != "/ban" && puns[selectedIndex] != "/warn" && puns[selectedIndex] != "/bans")) {
     result = "Ошибка: введите номер инцидента!";
-  } else if (input2 > incidents[selectedIndex].length){
+  } else if (input2 > incidents[selectedIndex].length || input2 <= 0){
     result = "Ошибка: инцидент указан неверно!";
   }
   
