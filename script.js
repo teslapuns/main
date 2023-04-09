@@ -38,9 +38,9 @@ function generateResult() {
       result = puns[selectedIndex] + " " + input1;
     }
     if (inc == incidents[selectedIndex].length - 1) {
-      result += pun_time + " " + selectedValue + "[Инцидент " + inc + "(предпоследний)]";
+      result += pun_time + " " + selectedValue + "[Инцидент " + inc + " (предпоследний)]";
     } else if (inc == incidents[selectedIndex].length ) {
-      result += pun_time + " " + selectedValue + "[Инцидент " + inc + "(последний)]";
+      result += pun_time + " " + selectedValue + "[Инцидент " + inc + " (последний)]";
     } else {
       result += pun_time + " " + selectedValue + "[Инцидент " + inc + "]";
     }
@@ -49,9 +49,9 @@ function generateResult() {
     result += " [Жалоба на форуме]";
   }
   if (input1 === "") {
-    result = "Ошибка: введите имя пользователя";
+    result = "Ошибка: введите имя пользователя!";
   } else if (input2 === "" && (puns[selectedIndex] != "/ban" && puns[selectedIndex] != "/warn" && puns[selectedIndex] != "/bans")) {
-    result = "Ошибка: введите номер инцидента";
+    result = "Ошибка: введите номер инцидента!";
   } else if (input2 > incidents[selectedIndex].length){
     result = "Ошибка: инцидент указан неверно!";
   }
