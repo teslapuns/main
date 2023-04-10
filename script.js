@@ -3,7 +3,7 @@ function generateResult() {
   var input1 = document.getElementById("input1").value;
   var select1 = document.getElementById("select1");
   var selectedValue = select1.options[select1.selectedIndex].value;
-  var input2 = decodeURIComponent(document.getElementById("input2").value);
+  var input2 = document.getElementById("input2").value;
   var checkbox1 = document.getElementById("checkbox1").checked;
 
   var incidents = [[], [], [], [], [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], [], [],
@@ -49,7 +49,7 @@ function generateResult() {
     result = "Ошибка: введите имя пользователя";
   } else if (input2 === "" && (puns[selectedIndex] != "/ban" && puns[selectedIndex] != "/warn" && puns[selectedIndex] != "/bans")) {
     result = "Ошибка: введите номер инцидента";
-  } else if (input2 > incidents[selectedIndex].length){
+  } else if (input2 > incidents[selectedIndex].length || (input2 < 1 && input2 !== "")){
     result = "Ошибка: инцидент указан неверно!";
   }
   
@@ -62,3 +62,27 @@ document.getElementById("input1").addEventListener("input", generateResult);
 document.getElementById("select1").addEventListener("change", generateResult);
 document.getElementById("input2").addEventListener("input", generateResult);
 document.getElementById("checkbox1").addEventListener("change", generateResult);
+
+function copyResult() {
+  var resultElement = document.getElementById("result-container");
+  var resultText = resultElement.innerText;
+  var copyButton = document.getElementById('copy-button'); // Получаем ссылку на кнопку
+  
+  // Записываем текст в буфер обмена
+  navigator.clipboard.writeText(resultText).then(function() {
+    // Меняем текст на кнопке на "Скопировано!" и цвет на зеленый
+    copyButton.textContent = "Скопировано!";
+    copyButton.style.backgroundColor = "green";
+    
+    // Через 4 секунды восстанавливаем текст на кнопке на "Скопировать" и цвет на изначальный
+    setTimeout(function() {
+      copyButton.textContent = "Скопировать";
+      copyButton.style.backgroundColor = "";
+    }, 4000);
+  }).catch(function(err) {
+    console.error("Ошибка при копировании: ", err);
+  });
+}
+
+
+
