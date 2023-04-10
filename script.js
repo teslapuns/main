@@ -18,7 +18,7 @@ function generateResult() {
              ["2h", "6h", "1d", "3d", "7d", ""]]
     
   var puns = ["/ban", "/ban", "/ban", "/warn", "/tempmute", "/warn", "/warn", "/tempban", "/tempmute", "/tempban", "/tempban",
-            "/warn", "/bans", "/tempban", "/warn", "/warn", "/tempban", "/rtempban Крокодил"]
+            "/warn", "/bans", "/tempban", "/warn", "/warn", "/tempban", "/rtempban"]
   // Генерация результата
   var result = "Введите данные...";
   var selectElement = document.getElementById("select1");
@@ -33,6 +33,9 @@ function generateResult() {
     } else {
       pun_time = " " + pun_time;
       result = puns[selectedIndex] + " " + input1;
+    }
+    if (puns[selectedIndex] == "/rtempban"){
+      result += " Крокодил ";
     }
     if (inc == incidents[selectedIndex].length - 1) {
       result += pun_time + " " + selectedValue + "[Инцидент " + inc + "(предпоследний)]";
