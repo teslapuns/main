@@ -6,7 +6,7 @@
 }
 
 /* Применение вашего шрифта ко всем надписям, инпутам и селектам */
-body, .form-container input, select#select1, main {
+body, .form-container input, select#select1, main, .form-container button {
 	font-family: 'MyCustomFont', Arial, sans-serif; /* Имя вашего шрифта, затем запасные варианты, такие как стандартные шрифты Arial и sans-serif */
 }
 
@@ -74,3 +74,19 @@ body, .form-container input, select#select1, main {
     margin-right: 10px; /* Добавляем отступ справа, чтобы текст был выровнен с левой стороны чекбокса */
 	width: 5%;
   }
+
+  .form-container button {
+	display: block; /* изменено значение на "block" */
+	/* margin-left: 10px; */ /* удалено свойство */
+	margin-bottom: 30px; /* изменено значение на "30px" */
+	padding: 10px;
+	font-size: 16px;
+	border: none;
+	border-radius: 3px;
+	background-color: #007bff;
+	color: #fff;
+	cursor: pointer;
+	clear: both; /* добавлено свойство */
+  }
+  
+  
