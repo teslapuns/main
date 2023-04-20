@@ -38,11 +38,11 @@ function generateResult() {
       result += " Крокодил ";
     }
     if (inc == incidents[selectedIndex].length - 1) {
-      result += pun_time + " " + selectedValue + "[Инцидент " + inc + "(предпоследний)]";
+      result += pun_time + " " + selectedValue + " [Инцидент " + inc + "(предпоследний)]";
     } else if (inc == incidents[selectedIndex].length ) {
-      result += pun_time + " " + selectedValue + "[Инцидент " + inc + "(последний)]";
+      result += pun_time + " " + selectedValue + " [Инцидент " + inc + "(последний)]";
     } else {
-      result += pun_time + " " + selectedValue + "[Инцидент " + inc + "]";
+      result += pun_time + " " + selectedValue + " [Инцидент " + inc + "]";
     }
   }
   if (checkbox1) {
